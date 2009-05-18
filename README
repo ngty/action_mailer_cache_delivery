@@ -6,6 +6,12 @@ This plugin enhances ActionMailer to support the :cache method, which behaves li
 :test, except that the deliveries are marshalled to a temporary cache file, thus,
 making them available to other processes.
 
+Installation
+============
+
+  #$ cd RAILS_ROOT
+  #$ ./script/plugin install git://github.com/ngty/action_mailer_cache_delivery.git
+
 Example
 =======
 
