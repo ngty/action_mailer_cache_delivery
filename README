@@ -1,0 +1,27 @@
+ActionMailerCacheDelivery
+========================
+
+Currently ActionMailer only supports :test, :smtp & :sendmail delivery methods.
+This plugin enhances ActionMailer to support the :cache method, which behaves like
+:test, except that the deliveries are marshalled to a temporary cache file, thus,
+making them available to other processes.
+
+Example
+=======
+
+In your RAILS_ROOT/config/environments/test.rb, make sure you have the line:
+
+  config.action_mailer.delivery_method = :cache
+
+And that's all. To access the cached deliveries in another process, just do:
+
+  ActionMailer::Base.cached_deliveries # array of TMail::Mail instances
+
+
+Credits
+=======
+
+Many thanks to langalex, who suggested the birth of this plugin.
+
+
+Copyright (c) 2009 [Ng Tze Yang, ngty77(at)gmail(dot)com], released under the MIT license

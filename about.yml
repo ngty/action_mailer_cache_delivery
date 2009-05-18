@@ -1,0 +1,7 @@
+author: Ng Tze Yang
+summary: Provides :cache delivery method for ActionMailer
+homepage: http://github.com/ngty/action_mailer_cache_delivery
+plugin: action_mailer_cache_delivery
+license: MIT
+version: 0.1.0
+rails_version: >= 2.3.2
